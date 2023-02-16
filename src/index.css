@@ -1,0 +1,20 @@
+.imagen{
+
+  height:200px;
+}
+
+.learn{
+  width:100px;
+
+}
+
+.card{
+
+  box-shadow: 10px 10px rgb(141, 170, 231);
+}
+.card:hover{
+  box-shadow: 12px 12px rgb(114, 133, 173);
+  transform: translateY(-3%)
+
+}
+
