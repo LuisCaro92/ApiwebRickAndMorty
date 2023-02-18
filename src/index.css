@@ -1,3 +1,5 @@
+
+
 .imagen{
 
   height:200px;
@@ -10,11 +12,14 @@
 
 .card{
 
-  box-shadow: 10px 10px rgb(141, 170, 231);
+  box-shadow: 10px 10px  rgb(141, 170, 231);
 }
 .card:hover{
-  box-shadow: 12px 12px rgb(114, 133, 173);
-  transform: translateY(-3%)
+
+  box-shadow: 12px 12px 12px 12px rgb(114, 133, 173);
+  transform: translateX(-40%)
 
 }
+
+
 
