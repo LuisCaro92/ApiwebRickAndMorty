@@ -13,13 +13,40 @@
 .card{
 
   box-shadow: 10px 10px  rgb(141, 170, 231);
+ 
 }
 .card:hover{
 
   box-shadow: 12px 12px 12px 12px rgb(114, 133, 173);
-  transform: translateX(-40%)
+  transform: translate(-35%)
+  
 
 }
 
+body 
+{
+    background-color: black;
+    background-image: url("https://media1.giphy.com/media/3og0IFrHkIglEOg8Ba/giphy.gif?cid=ecf05e47ox4i5wqk1cukgg2da1zdgyhbhxk37hs0327yc4z8&rid=giphy.gif&ct=g"); 
+                background-position: center 25%; 
+                background-size: cover;
+                background-repeat: repeat-y;
+   
+ 
+}
+
+ h1{
+color:rgb(32, 180, 143)
+
+ }
+
+.cuerpo{
+background-color: rgb(52, 170, 131);
+
+
+}
+.detalle{
+  border-radius: 5%;
+  border-color: yellowgreen;
+}
 
 

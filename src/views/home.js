@@ -5,14 +5,15 @@ import Nav from "../componentes/narv";
 import Cards from "../componentes/card";
 import Location from "../componentes/ubicaciones";
 import Episodio from "../componentes/episodio";
-import { useEffect, useState } from "react";
+
+import { useEffect, useState, useContext } from "react";
+
 
 function Home() {
   const [caracteres, setCaracteres] = useState([]);
   const [ubicaciones, setUbicaciones] = useState([]);
   const [episodios, setEpisodios] = useState([]);
-  const [pagina, setPagina]= useState(1);
-
+  const [pagina, setPagina] = useState(1);
 
   const getCaracteres = () => {
     fetch(`https://rickandmortyapi.com/api/character?page=${pagina}`)
@@ -35,17 +36,21 @@ function Home() {
       .catch((error) => console.log(error));
   };
 
- const Pagina= (props) => {
+  const Pagina = (props) => {
     return (
       <header className="d-flex justify-content-between align-items-center">
-       <button className="btn btn-warning btn-sm"  
-        onClick={()=>props.setPagina(props.pagina-1)}
+        <button
+          className="btn btn-warning btn-sm"
+          onClick={() => props.setPagina(props.pagina - 1)}
         >
-         Pagina {props.pagina-1}</button>
-        <button className="btn btn-warning btn-sm"  
-        onClick={()=>props.setPagina(props.pagina+1)}
+          Pagina {props.pagina - 1}
+        </button>
+        <button
+          className="btn btn-warning btn-sm"
+          onClick={() => props.setPagina(props.pagina + 1)}
         >
-         Pagina {props.pagina+1}</button>
+          Pagina {props.pagina + 1}
+        </button>
       </header>
     );
   };
@@ -56,12 +61,11 @@ function Home() {
   }, [pagina]);
 
   return (
-    <div className="App ">
-      <Nav/>
-
+    <div className="app">
+       <Nav />
       <div className="container">
-        <h1>Personajes</h1>
-        <Pagina pagina={pagina} setPagina={setPagina}/>
+        <h1 className="d-flex justify-content-center">Personajes</h1>
+        <Pagina pagina={pagina} setPagina={setPagina} />
         <div className="row">
           {caracteres.map((caracter) => (
             <div className="col-2 m-2">
@@ -73,7 +77,7 @@ function Home() {
             </div>
           ))}
         </div>
-        <h1>Ubicaciones</h1>
+        <h1 className="d-flex justify-content-center">Ubicaciones</h1>
         <div className="row">
           {ubicaciones.map((ubicacion) => (
             <div className="col-2 m-3">
@@ -86,7 +90,7 @@ function Home() {
             </div>
           ))}
         </div>
-        <h1>Episodios</h1>
+        <h1 className="d-flex justify-content-center">Episodios</h1>
         <div className="row">
           {episodios.map((episodio) => (
             <div className="col-2 m-3">
